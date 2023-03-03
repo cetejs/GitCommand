@@ -96,7 +96,7 @@ public static class GitCommandEditor
 
     private static string GetShellPath(string name)
     {
-        return $"{Application.dataPath}/{GetPackagePah()}/Editor/Shells/{name}.sh";
+        return $"{GetPackagePah()}/Editor/Shells/{name}.sh";
     }
 
     private static string GetPackagePah()
@@ -107,7 +107,7 @@ public static class GitCommandEditor
             return package;
         }
 
-        return Path.GetFullPath("Package");
+        return Path.GetFullPath("Assets/Package");
     }
 
     private static Process StartProcess(string fileName)
